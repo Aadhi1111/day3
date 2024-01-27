@@ -3,7 +3,13 @@ request.open("GET","https://restcountries.com/v3.1/all");
 request.send();
 request.onload = function(){
     var res = JSON.parse(request.response);
-    console.log(res); 
+    console.log(res);
+
+    //Question 2 : Solution
+    for(var i=0;i<res.length;i++){
+        console.log(res[i].flags.svg);
+    }
+
     //Question 3 : solution
     for(var i=0;i<res.length;i++){
         //if(res[i].name.common){
@@ -17,4 +23,4 @@ request.onload = function(){
 }
 
 
-//Question 2 : Solution
+
